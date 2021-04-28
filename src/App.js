@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { BrowserRouter } from 'react-router-dom'
+import { HashRouter } from 'react-router-dom'
 import './App.css';
 import SideNav from './components/SideNav'
 import Router from './Router'
@@ -7,12 +7,12 @@ function App() {
   const [page, setPage] = useState('')
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <SideNav page={page} setPage={setPage}/>
-        <Router className="content"/>
+        <Router  className="content"/>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
