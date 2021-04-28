@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+
+$primary-font: #3a3a3a;
+$light-font: #fffefe;
+$accent: #eccd41;
+
+@mixin flex($direction, $align, $justify){
+  display:flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+
+  a{
+    text-decoration: none;
+    color: $primary-font;
+    cursor: pointer;
+  }
+}
+
+.App{
+  @include flex(row, space-between, space-between);
+  min-height: 100vh;
+  padding: 10vh 2vw;
+  background-color: rgb(247, 245, 245);
+  color: $primary-font;
+
+  .title{
+    text-align: right;
+    padding-right: 3vw;
+  } 
+  button{
+    padding: 1em;
+    margin: 1em;
+    background-color: $accent;
+    cursor: pointer;
+  }
+
+}
+
+//Page Content - General Styles
+.content{
+  margin-right: 3vw;
+  width: 65vw;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10vh;
+  color: $primary-font;
+  font-family: 'Oswald', sans-serif;
+  
+  .title{
+    text-align: center;
+  }
+
+  .filled {
+    height: fit-content;
+    background-color: $accent;
+    color: $light-font;
+        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+
+  .image{
+    max-width: 500px;
+  }
+}
+
+//Side Nav Styles
+nav {
+  margin-left: 3vw;
+  min-width: 20vw;
+  color: $primary-font;
+
+  h2{
+    font-weight: 200;
+  }
+
+  hr{
+    margin-top: 5px;
+    width: 80%;
+    border-top: 3px solid $accent;
+  }
+
+  ol {
+    padding: 2vh;
+    li{
+      padding: 8px;
+      list-style-type: none;
+  
+      &:hover::before{
+          content: "\2022";
+          color: $accent;
+          display: inline-block; 
+          width: 1em; 
+          margin-left: -.5em;
+      }
+    }
+  }
+
+  .icon{
+    width: 4vmin;
+    padding: 5px;
+  }
+}
+
+//Landing Specific Styles
+.landing{
+
+  h4{
+    font-size: 5rem;
+  }
+
+  .imageBox {
+  flex-grow: 1;
+  position: relative;
+  width: 350px;
+  height: auto;
+  margin: 20px;
+    
+    .image {
+      display: block;
+      image-rendering: crisp-edges;
+      min-height: 100%;
+      max-width: 100%;
+      box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.50);
+    }
+  }
+}
+
+//Gallery Specific Styles
+.gallery {
+  @include flex(row, space-around, center);
+  flex-wrap: wrap;
+  margin: 10px;
+  
+  a {
+    font-size: 1.3em;
+    text-decoration: none;
+    color: whitesmoke;
+  }
+  .imageBox {
+    flex-grow: 1;
+    position: relative;
+    max-width: 250px;
+    height: auto;
+    margin: 20px;
+
+    &:hover .overlay {
+      opacity: 1;
+    }
+      
+      .image {
+        display: block;
+        image-rendering: crisp-edges;
+        min-height: 100%;
+        max-width: 100%;
+        box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.50);
+      }
+      
+      .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        margin: auto;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: rgba(0, 0, 0, 0.5);
+
+          .text {
+            color: white;
+            font-size: 1em;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            // -webkit-transform: translate(-50%, -50%);
+            // -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+          }
+      }
+  }
+}
+
+//Resume Specific Styles
+.resume{
+  @include flex(column, center, space-around);
+  
+  h2, h3 {
+        text-align: center;
+  }
+  .filled {
+    width: 68vw;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .education{
+    p{
+      text-align: center;
+    }
+  }
+}
+
+.techProficiencies{
+  margin: 2vh 1vw;
+  li{
+    list-style-type: none;
+  }
+}
+  
+.examples{
+  margin: 2vh 1vw;
+
+  .accentColor{
+    color: $accent;
+    letter-spacing: .15rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  }
+
+  .positionInfo{
+    @include flex(row, center, space-between);
+  }
+  li {
+    list-style-type: disc;
+    margin-left: 1.5em;
+  }
+
+  .subList{
+    list-style-type: circle;
+  }
+}
+
+
+//Contact Specific Styles
+.contact{
+  min-width: 65vw;
+  text-align: center;
+  @include flex(row, center, space-around);
+
+  h4{
+    font-size: 5rem;
+  }
+
+  .form{
+    margin: 3vw;
+  }
+
+  .textField{
+    width: 35vw;
+  }
+
+  .messageField{
+    width: 35vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .App{
+    flex-direction: column;
+    .title{
+      text-align: center;
+    }
+  }
+  nav {
+    ol{
+      @include flex(row, center, space-around)
+    }
+    .icon{
+      display: none;
+    }
+  }
+
+  .landing{
+    @include flex(column-reverse, center, center);
+    margin: auto;
+    .imageBox{
+      width: 250px;
+    }
+  }
+
+  .content{
+    @include flex(column, center, center);
+    width: 90vw;
+    margin: auto;
+
+    .filled{
+      width: 90vw;
+    }
+  }
+
+  .experience{
+    h3{
+      text-align: left;
+    }
+  }
+
+  .title{
+    display: none;
+  }
+
+  .contact{
+    h4{
+      font-size: 4em;
+    }
+  }
+
+  .form{
+    width: 90vw;
+    margin: auto;
+    .textField, .messageField{
+      width: 80vw;
+    }
+  }
+}
