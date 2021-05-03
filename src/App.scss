@@ -58,9 +58,15 @@ $accent: #eccd41;
 
   .filled {
     height: fit-content;
-    background-color: $accent;
-    color: $light-font;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding-top: 3vh;
+    text-align: left;
+    border-bottom: 3px solid $accent;
+
+    h3{
+      font-weight: 200;
+      text-align: left;
+
+    }
   }
 
   .image{
@@ -191,18 +197,34 @@ nav {
 //Resume Specific Styles
 .resume{
   @include flex(column, center, space-around);
+
+  h2{
+    font-weight: 200;
+  }
   
   h2, h3 {
         text-align: center;
   }
+
+  .profile{
+    width: 65vw;
+    h3{
+      font-size: 1em;
+    }
+  }
+
   .filled {
     width: 68vw;
-    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
+    // text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
   }
 
   .education{
     p{
       text-align: center;
+    }
+
+    h3{
+      margin-top: 2vh;
     }
   }
 }
@@ -210,21 +232,26 @@ nav {
 .techProficiencies{
   margin: 2vh 1vw;
   li{
+    margin-top: 2vh;
+
     list-style-type: none;
   }
 }
   
 .examples{
   margin: 2vh 1vw;
+  
 
   .accentColor{
     color: $accent;
     letter-spacing: .15rem;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   }
 
   .positionInfo{
     @include flex(row, center, space-between);
+    margin-top: 3vh;
+
   }
   li {
     list-style-type: disc;
