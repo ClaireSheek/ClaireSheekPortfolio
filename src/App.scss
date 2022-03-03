@@ -1,58 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&display=swap");
 
 $primary-font: #3a3a3a;
 $light-font: #fffefe;
-$accent: #eccd41;
+$accent: #f6913f;
 
-@mixin flex($direction, $align, $justify){
-  display:flex;
+@mixin flex($direction, $align, $justify) {
+  display: flex;
   flex-direction: $direction;
   align-items: $align;
   justify-content: $justify;
 }
 
-*{
+* {
   padding: 0;
   margin: 0;
 
-  a{
+  a {
     text-decoration: none;
     color: $primary-font;
     cursor: pointer;
   }
 }
 
-.App{
+.App {
   @include flex(row, space-between, space-between);
   min-height: 100vh;
   padding: 10vh 2vw;
   background-color: rgb(247, 245, 245);
   color: $primary-font;
 
-  .title{
+  .title {
     text-align: right;
     padding-right: 3vw;
-  } 
-  button{
+  }
+  button {
     padding: 1em;
     margin: 1em;
-    background-color: $accent;
+    background-color: #fac89f;
     cursor: pointer;
   }
-
 }
 
 //Page Content - General Styles
-.content{
+.content {
   margin-right: 3vw;
   width: 65vw;
   display: flex;
   justify-content: space-between;
-  padding-top: 10vh;
+  padding-top: 6vh;
   color: $primary-font;
-  font-family: 'Oswald', sans-serif;
-  
-  .title{
+  font-family: "Oswald", sans-serif;
+
+  .title {
     text-align: center;
   }
 
@@ -62,14 +61,13 @@ $accent: #eccd41;
     text-align: left;
     border-bottom: 3px solid $accent;
 
-    h3{
+    h3 {
       font-weight: 200;
       text-align: left;
-
     }
   }
 
-  .image{
+  .image {
     max-width: 500px;
   }
 }
@@ -80,11 +78,11 @@ nav {
   min-width: 20vw;
   color: $primary-font;
 
-  h2{
+  h2 {
     font-weight: 200;
   }
 
-  hr{
+  hr {
     margin-top: 5px;
     width: 80%;
     border-top: 3px solid $accent;
@@ -92,46 +90,45 @@ nav {
 
   ol {
     padding: 2vh;
-    li{
+    li {
       padding: 8px;
       list-style-type: none;
-  
-      &:hover::before{
-          content: "\2022";
-          color: $accent;
-          display: inline-block; 
-          width: 1em; 
-          margin-left: -.5em;
+
+      &:hover::before {
+        content: "\2022";
+        color: $accent;
+        display: inline-block;
+        width: 1em;
+        margin-left: -0.5em;
       }
     }
   }
 
-  .icon{
+  .icon {
     width: 4vmin;
     padding: 5px;
   }
 }
 
 //Landing Specific Styles
-.landing{
-
-  h4{
+.landing {
+  h4 {
     font-size: 5rem;
   }
 
   .imageBox {
-  flex-grow: 1;
-  position: relative;
-  width: 350px;
-  height: auto;
-  margin: 20px;
-    
+    flex-grow: 1;
+    position: relative;
+    width: 350px;
+    height: auto;
+    margin: 20px;
+
     .image {
       display: block;
       image-rendering: crisp-edges;
       min-height: 100%;
       max-width: 100%;
-      box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.50);
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -140,207 +137,147 @@ nav {
 .gallery {
   @include flex(row, space-around, center);
   flex-wrap: wrap;
-  margin: 10px;
-  
+  margin: 20px;
+
   a {
     font-size: 1.3em;
     text-decoration: none;
     color: whitesmoke;
   }
+
+  h3 {
+    text-align: center;
+  }
+
   .imageBox {
     flex-grow: 1;
     position: relative;
-    max-width: 250px;
+    max-width: 300px;
     height: auto;
-    margin: 20px;
+    margin: 32px;
 
     &:hover .overlay {
       opacity: 1;
     }
-      
-      .image {
-        display: block;
-        image-rendering: crisp-edges;
-        min-height: 100%;
-        max-width: 100%;
-        box-shadow: 3px 3px 3px  rgba(0, 0, 0, 0.50);
-      }
-      
-      .overlay {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 100%;
-        width: 100%;
-        margin: auto;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: rgba(0, 0, 0, 0.5);
 
-          .text {
-            color: white;
-            font-size: 1em;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            // -webkit-transform: translate(-50%, -50%);
-            // -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-            text-align: center;
-          }
+    .image {
+      display: block;
+      image-rendering: crisp-edges;
+      min-height: 100%;
+      max-width: 100%;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      margin: auto;
+      opacity: 0;
+      transition: 0.5s ease;
+      background-color: rgba(0, 0, 0, 0.5);
+
+      .text {
+        color: white;
+        font-size: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // -webkit-transform: translate(-50%, -50%);
+        // -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        text-align: center;
       }
+    }
   }
 }
 
 //Resume Specific Styles
-.resume{
-  @include flex(column, center, space-around);
+.resume {
+  flex-direction: column;
+  align-items: center;
 
-  h2{
-    font-weight: 200;
-  }
-  
-  h2, h3 {
-        text-align: center;
-  }
-
-  .profile{
-    width: 65vw;
-    h3{
-      font-size: 1em;
-    }
-  }
-
-  .filled {
-    width: 68vw;
-    // text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
-  }
-
-  .education{
-    p{
-      text-align: center;
-    }
-
-    h3{
-      margin-top: 2vh;
-    }
+  button {
+    width: 15vw;
   }
 }
-
-.techProficiencies{
-  margin: 2vh 1vw;
-  li{
-    margin-top: 2vh;
-
-    list-style-type: none;
-  }
-}
-  
-.examples{
-  margin: 2vh 1vw;
-  
-
-  .accentColor{
-    color: $accent;
-    letter-spacing: .15rem;
-    // text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-  }
-
-  .positionInfo{
-    @include flex(row, center, space-between);
-    margin-top: 3vh;
-
-  }
-  li {
-    list-style-type: disc;
-    margin-left: 1.5em;
-  }
-
-  .subList{
-    list-style-type: circle;
-  }
-}
-
 
 //Contact Specific Styles
-.contact{
+.contact {
   min-width: 65vw;
   text-align: center;
   @include flex(row, center, space-around);
 
-  h4{
+  h4 {
     font-size: 5rem;
   }
 
-  .form{
+  .form {
     margin: 3vw;
   }
 
-  .textField{
+  .textField {
     width: 35vw;
   }
 
-  .messageField{
+  .messageField {
     width: 35vw;
   }
 }
 
 @media screen and (max-width: 480px) {
-  .App{
+  .App {
     flex-direction: column;
-    .title{
+    .title {
       text-align: center;
     }
   }
   nav {
-    ol{
-      @include flex(row, center, space-around)
+    ol {
+      @include flex(row, center, space-around);
     }
-    .icon{
+    .icon {
       display: none;
     }
   }
 
-  .landing{
+  .landing {
     @include flex(column-reverse, center, center);
     margin: auto;
-    .imageBox{
+    .imageBox {
       width: 250px;
     }
   }
 
-  .content{
+  .content {
     @include flex(column, center, center);
     width: 90vw;
     margin: auto;
 
-    .filled{
+    .filled {
       width: 90vw;
     }
   }
 
-  .experience{
-    h3{
-      text-align: left;
-    }
-  }
-
-  .title{
+  .title {
     display: none;
   }
 
-  .contact{
-    h4{
+  .contact {
+    h4 {
       font-size: 4em;
     }
   }
 
-  .form{
+  .form {
     width: 90vw;
     margin: auto;
-    .textField, .messageField{
+    .textField,
+    .messageField {
       width: 80vw;
     }
   }

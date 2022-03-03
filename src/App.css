@@ -38,7 +38,7 @@
 .App button {
   padding: 1em;
   margin: 1em;
-  background-color: #eccd41;
+  background-color: #fac89f;
   cursor: pointer;
 }
 
@@ -51,9 +51,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 10vh;
+  padding-top: 6vh;
   color: #3a3a3a;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 .content .title {
@@ -66,7 +66,7 @@
   height: fit-content;
   padding-top: 3vh;
   text-align: left;
-  border-bottom: 3px solid #eccd41;
+  border-bottom: 3px solid #f6913f;
 }
 
 .content .filled h3 {
@@ -91,7 +91,7 @@ nav h2 {
 nav hr {
   margin-top: 5px;
   width: 80%;
-  border-top: 3px solid #eccd41;
+  border-top: 3px solid #f6913f;
 }
 
 nav ol {
@@ -105,10 +105,10 @@ nav ol li {
 
 nav ol li:hover::before {
   content: "\2022";
-  color: #eccd41;
+  color: #f6913f;
   display: inline-block;
   width: 1em;
-  margin-left: -.5em;
+  margin-left: -0.5em;
 }
 
 nav .icon {
@@ -155,7 +155,7 @@ nav .icon {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 10px;
+  margin: 20px;
 }
 
 .gallery a {
@@ -164,14 +164,18 @@ nav .icon {
   color: whitesmoke;
 }
 
+.gallery h3 {
+  text-align: center;
+}
+
 .gallery .imageBox {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
   position: relative;
-  max-width: 250px;
+  max-width: 300px;
   height: auto;
-  margin: 20px;
+  margin: 32px;
 }
 
 .gallery .imageBox:hover .overlay {
@@ -197,8 +201,8 @@ nav .icon {
   width: 100%;
   margin: auto;
   opacity: 0;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -214,9 +218,6 @@ nav .icon {
 }
 
 .resume {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -224,80 +225,10 @@ nav .icon {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
 }
 
-.resume h2 {
-  font-weight: 200;
-}
-
-.resume h2, .resume h3 {
-  text-align: center;
-}
-
-.resume .profile {
-  width: 65vw;
-}
-
-.resume .profile h3 {
-  font-size: 1em;
-}
-
-.resume .filled {
-  width: 68vw;
-}
-
-.resume .education p {
-  text-align: center;
-}
-
-.resume .education h3 {
-  margin-top: 2vh;
-}
-
-.techProficiencies {
-  margin: 2vh 1vw;
-}
-
-.techProficiencies li {
-  margin-top: 2vh;
-  list-style-type: none;
-}
-
-.examples {
-  margin: 2vh 1vw;
-}
-
-.examples .accentColor {
-  color: #eccd41;
-  letter-spacing: .15rem;
-}
-
-.examples .positionInfo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 3vh;
-}
-
-.examples li {
-  list-style-type: disc;
-  margin-left: 1.5em;
-}
-
-.examples .subList {
-  list-style-type: circle;
+.resume button {
+  width: 15vw;
 }
 
 .contact {
@@ -399,9 +330,6 @@ nav .icon {
   .content .filled {
     width: 90vw;
   }
-  .experience h3 {
-    text-align: left;
-  }
   .title {
     display: none;
   }
@@ -412,7 +340,8 @@ nav .icon {
     width: 90vw;
     margin: auto;
   }
-  .form .textField, .form .messageField {
+  .form .textField,
+  .form .messageField {
     width: 80vw;
   }
 }
