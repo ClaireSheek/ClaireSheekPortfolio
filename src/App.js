@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router className="content">
+      <Router className="content" basename="/ClaireSheekPortfolio">
         <SideNav page={page} setPage={setPage} />
         <Switch>
           <Route exact path="/" component={Landing} />
