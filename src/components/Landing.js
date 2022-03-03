@@ -47,7 +47,7 @@ const Landing = ({ page }) => {
         <div className="imageBox">
           <img
             src={myProfilePic}
-            alt="video clip of website example"
+            alt="Headshot of Claire Sheek"
             className="image"
           />
         </div>
