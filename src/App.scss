@@ -25,7 +25,7 @@ $accent: #f6913f;
 .App {
   @include flex(row, space-between, space-between);
   min-height: 100vh;
-  padding: 10vh 2vw;
+  padding: 10vh 3vw;
   background-color: rgb(247, 245, 245);
   color: $primary-font;
 
@@ -43,7 +43,7 @@ $accent: #f6913f;
 
 //Page Content - General Styles
 .content {
-  margin-right: 3vw;
+  margin-right: 6vw;
   width: 65vw;
   display: flex;
   justify-content: space-between;
@@ -94,11 +94,8 @@ nav {
       padding: 8px;
       list-style-type: none;
 
-      &:hover::before {
-        content: "\2022";
+      .active {
         color: $accent;
-        display: inline-block;
-        width: 1em;
         margin-left: -0.5em;
       }
     }
@@ -229,7 +226,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   .App {
     flex-direction: column;
     .title {

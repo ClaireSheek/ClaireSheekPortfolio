@@ -25,7 +25,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   min-height: 100vh;
-  padding: 10vh 2vw;
+  padding: 10vh 3vw;
   background-color: #f7f5f5;
   color: #3a3a3a;
 }
@@ -43,7 +43,7 @@
 }
 
 .content {
-  margin-right: 3vw;
+  margin-right: 6vw;
   width: 65vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,11 +103,8 @@ nav ol li {
   list-style-type: none;
 }
 
-nav ol li:hover::before {
-  content: "\2022";
+nav ol li .active {
   color: #f6913f;
-  display: inline-block;
-  width: 1em;
   margin-left: -0.5em;
 }
 
@@ -264,7 +261,7 @@ nav .icon {
   width: 35vw;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   .App {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
