@@ -18,7 +18,7 @@ const Portfolio = () => {
       <Animated animationIn="flipInX" animationInDelay={500}>
         <h2 className="title">Portfolio</h2>
       </Animated>
-      <section className="gallery content">
+      <section className="content">
         <div className="videoBox">
           <video width="600" height="400" controls="controls">
             <source src={Seymour} type="video/mp4" />
@@ -45,56 +45,58 @@ const Portfolio = () => {
             </div>
           </div>
         </div>
-        <Gif
-          src={SeymourGif}
-          alt={"video clip of website example"}
-          url={"./error"}
-          target={"_self"}
-          title={"Seymour: Houseplant Care"}
-          subtitle={"React, Node, MySQL"}
-        />
-        <Gif
-          src={atxbusiness}
-          alt={"video clip of website example"}
-          url={"https://clairesheek.github.io/ATXBusinessApp/"}
-          title={"Dog Friendly Business Finder"}
-          subtitle={"React, Google Maps API, Material UI"}
-        />
-        <Gif
-          src={ondraft}
-          alt={"video clip of website example"}
-          url={"https://clairesheek.github.io/punk-api-react-app/"}
-          title={"Beer Draft List"}
-          subtitle={"HTML, CSS, JS, Rest API"}
-        />
-        <Gif
-          src={salonGif}
-          alt={"video clip of website example"}
-          url={"https://clairesheek.github.io/hairSalonWebsite/"}
-          title={"Sample Salon Site"}
-          subtitle={"HTML, CSS"}
-        />
-        <Gif
-          src={parallaxScroll}
-          alt={"video clip of website example"}
-          url={"https://clairesheek.github.io/parallaxPractice/"}
-          title={"Parallax Illustration"}
-          subtitle={"Adobe AI, HTML, CSS, Rellax"}
-        />
-        <Gif
-          src={JSdrumKit}
-          alt={"video clip of website example"}
-          url={"https://clairesheek.github.io/JSDrumKit/"}
-          title={"JavaScript Drum Kit"}
-          subtitle={"HTML, CSS, Javascript"}
-        />
-        {/* <Gif
+        <div className="gallery">
+          <Gif
+            src={SeymourGif}
+            alt={"video clip of website example"}
+            url={"./error"}
+            target={"_self"}
+            title={"Seymour: Houseplant Care"}
+            subtitle={"React, Node, MySQL"}
+          />
+          <Gif
+            src={atxbusiness}
+            alt={"video clip of website example"}
+            url={"https://clairesheek.github.io/ATXBusinessApp/"}
+            title={"Dog Friendly Business Finder"}
+            subtitle={"React, Google Maps API, Material UI"}
+          />
+          <Gif
+            src={ondraft}
+            alt={"video clip of website example"}
+            url={"https://clairesheek.github.io/punk-api-react-app/"}
+            title={"Beer Draft List"}
+            subtitle={"HTML, CSS, JS, Rest API"}
+          />
+          <Gif
+            src={salonGif}
+            alt={"video clip of website example"}
+            url={"https://clairesheek.github.io/hairSalonWebsite/"}
+            title={"Sample Salon Site"}
+            subtitle={"HTML, CSS"}
+          />
+          <Gif
+            src={parallaxScroll}
+            alt={"video clip of website example"}
+            url={"https://clairesheek.github.io/parallaxPractice/"}
+            title={"Parallax Illustration"}
+            subtitle={"Adobe AI, HTML, CSS, Rellax"}
+          />
+          <Gif
+            src={JSdrumKit}
+            alt={"video clip of website example"}
+            url={"https://clairesheek.github.io/JSDrumKit/"}
+            title={"JavaScript Drum Kit"}
+            subtitle={"HTML, CSS, Javascript"}
+          />
+          {/* <Gif
           src={imageGalleryGif}
           alt={"video clip of website example"}
           url={"https://clairesheek.github.io/image-gallery/"}
           title={"Basic Image Gallery"}
           subtitle={"HTML, CSS"}
         /> */}
+        </div>
       </section>
     </Animated>
   );

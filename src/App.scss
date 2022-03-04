@@ -43,9 +43,10 @@ $accent: #f6913f;
 
 //Page Content - General Styles
 .content {
-  margin-right: 6vw;
-  width: 65vw;
+  // margin-right: 3vw;
+  width: 70vw;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   padding-top: 6vh;
   color: $primary-font;
@@ -109,6 +110,7 @@ nav {
 
 //Landing Specific Styles
 .landing {
+  flex-direction: row;
   h4 {
     font-size: 5rem;
   }
@@ -147,10 +149,10 @@ nav {
   }
 
   .imageBox {
-    flex-grow: 1;
+    // flex-grow: 1;
     position: relative;
-    max-width: 300px;
-    height: auto;
+    width: 400px;
+    height: 250px;
     margin: 32px;
 
     &:hover .overlay {
@@ -158,10 +160,11 @@ nav {
     }
 
     .image {
+      position: absolute;
       display: block;
       image-rendering: crisp-edges;
-      min-height: 100%;
-      max-width: 100%;
+      height: 100%;
+      width: 100%;
       box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
     }
 
@@ -184,14 +187,12 @@ nav {
         position: absolute;
         top: 50%;
         left: 50%;
-        // -webkit-transform: translate(-50%, -50%);
-        // -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
         text-align: center;
       }
     }
 
-    .image:before {
+    .imageBox:before {
       content: " ";
       position: absolute;
       top: 50%;
@@ -204,6 +205,9 @@ nav {
       animation: loader 1s linear infinite;
     }
   }
+}
+.videoBox {
+  margin: auto;
 }
 
 //Resume Specific Styles
@@ -239,7 +243,7 @@ nav {
   }
 }
 
-@media screen and (max-width: 560px) {
+@media screen and (max-width: 460px) {
   .App {
     flex-direction: column;
     .title {
