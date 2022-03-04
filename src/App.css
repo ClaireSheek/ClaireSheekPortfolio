@@ -214,6 +214,20 @@ nav .icon {
   text-align: center;
 }
 
+.gallery .imageBox .image:before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  height: 80px;
+  border: 2px solid #5c5c5c;
+  border-color: transparent #5c5c5c transparent #5c5c5c;
+  border-radius: 50%;
+  -webkit-animation: loader 1s linear infinite;
+          animation: loader 1s linear infinite;
+}
+
 .resume {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -340,6 +354,28 @@ nav .icon {
   .form .textField,
   .form .messageField {
     width: 80vw;
+  }
+}
+
+@-webkit-keyframes loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+            transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%) rotate(360deg);
+            transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 /*# sourceMappingURL=App.css.map */

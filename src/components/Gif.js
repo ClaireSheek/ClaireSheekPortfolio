@@ -3,7 +3,7 @@ import React from "react";
 const Gif = ({ src, alt, url, target, title, subtitle }) => {
   return (
     <div className="imageBox">
-      <img src={src} alt={alt} className="image" loading="lazy" />
+      <img src={src} alt={alt} className="image" />
       <div className="overlay">
         <div className="text">
           <a href={url} target={target || "_blank"} rel="noreferrer">
